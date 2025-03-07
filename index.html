@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+        <ksand:wght@300;400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <h1></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#paket">Paket Trip</a></li>
+                    <li><a href="#tentang">Tentang Kami</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Yama Dolphin Tour menawarkan pengalaman tak terlupakan.</h2>
+                <p>Liburan Impian Anda dimulai di sini!</p>
+                <a href="#paket" class="btn">Pilih Paket Tour</a>
+            </div>
+            <div class="hero-image">
+                <img src="header.jpg" alt="Lovina Bali Beach">
+            </div>
+        </section>
+        
+    
+        <script src="script.js"></script>
+    </body>
+    </html>   
+    <section id="paket" class="paket">
+        <h2>Paket Trip Kami</h2>
+        <div class="paket-card" onclick="openPopup('paket-a')">
+            <img src="paket1.jpg" alt="Paket full Trip" class="paket-img">
+            <h3>Paket full Trip</h3>
+            <p>Experience the Ultimate Full Trip Dolphin Tour in Lovina.
+            <p> Privat Price Rp.xxxx
+          <p>Sharing Price Rp.xxx  
+
+          </p>   
+           </p>
+            <a href="https://wa.me/083115042467" class="btn-whatsapp" target="_blank">Pesan Sekarang via WhatsApp</a>
+        </div>
+        <div class="paket-card" onclick="openPopup('paket-b')">
+            <img src="paket2.jpg" alt="Paket B" class="paket-img">
+            <h3>Paket Watch Dholpin Only</h3>
+            <p>Witness Dolphins in Their Natural Habitat – Dolphin Only Tour!</p>
+            <p> Privat Price Rp.xxxx </p>
+            <p> Sharing Price Rp.xxxx </p>
+            <a href="https://wa.me/083115042467" class="btn-whatsapp" target="_blank">Pesan Sekarang via WhatsApp</a>
+        </div>
+        <div class="paket-card" onclick="openPopup('paket-c')">
+            <img src="paket3.jpg" alt="Paket C" class="paket-img">
+            <h3>Paket Dolphin and Snorkeling
+            </h3>
+            <p>Experience the Magic of Dolphins and Snorkeling in Lovina!</p>
+            <p> Privat Price Rp.xxxx </p>
+            <p> Sharing Price Rp.xxxx </p>
+
+            <a href="https://wa.me/083115042467" class="btn-whatsapp" target="_blank">Pesan Sekarang via WhatsApp</a>
+        </div>
+        <div class="paket-card" onclick="openPopup('paket-c')">
+            <img src="paket4.jpg" alt="Paket C" class="paket-img">
+            <h3>Paket Dolphin and Swim with Dolphin
+            </h3>
+            <p>Unforgettable Dolphin Swimming Adventure Awaits!</p>
+            <p> Privat Price Rp.xxxx </p>
+            <p> Sharing Price Rp.xxxx </p>
+
+            <a href="https://wa.me/083115042467" class="btn-whatsapp" target="_blank">Pesan Sekarang via WhatsApp</a>
+        </div>
+    </section>
+    
+        
+
+    <section id="tentang" class="tentang">
+        <h2>Tentang Kami</h2>
+        <p>Yama Dolphin Tour adalah pilihan terbaik bagi Anda yang ingin merasakan petualangan laut yang luar biasa di Lovina, Bali. Kami menghadirkan pengalaman tak terlupakan, mulai dari menyaksikan lumba-lumba liar yang menari di perairan biru hingga menjelajahi keindahan bawah laut yang penuh warna. Dengan tim profesional, perahu modern yang nyaman, serta komitmen tinggi terhadap keselamatan dan kepuasan pelanggan, kami siap membawa Anda dalam perjalanan yang penuh kesan. Nikmati keindahan matahari terbit di tengah samudra, rasakan ketenangan alam, dan ciptakan kenangan indah bersama Yama Dolphin Tour!</p>
+    </section>
+
+    <section id="kontak" class="kontak">
+        <h2>Kontak Kami</h2>
+        <p>Jika Anda membutuhkan informasi lebih lanjut, hubungi kami langsung melalui WhatsApp.</p>
+        <a href="https://wa.me/083115042467" class="btn-whatsapp" target="_blank">Hubungi Kami via WhatsApp</a>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<body>
+
+    <div class="footer" onclick="togglePopup()">
+        <span>📱 Sosial Media</span>
+    </div>
+    
+    <div class="popup" id="popup">
+        <a href="https://www.instagram.com/yamadolphintour
+        " target="_blank">📸 Instagram</a>
+        <a href="https://wa.me/083115042467" target="_blank">📞 WhatsApp</a>
+    </div>
+    
+    <script>
+        function togglePopup() {
+            var popup = document.getElementById("popup");
+            if (popup.style.display === "block") {
+                popup.style.display = "none";
+            } else {
+                popup.style.display = "block";
+            }
+        }
+    </script>
+    
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+    var map = L.map('map').setView([-8.1575, 115.0287], 15); // Ganti dengan koordinat Yama Dolphin Tour
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    L.marker([-8.1575, 115.0287]).addTo(map) // Ganti dengan koordinat Yama Dolphin Tour
+        .bindPopup("<b>Yama Dolphin Tour</b><br>Lovina, Bali")
+        .openPopup();
+</script>
+<div class="coordinate-popup" id="coordinatePopup" onclick="openGoogleMaps()">
+    <button class="map-button">Buka di Google Maps</button>
+</div>
+<script>
+    function openGoogleMaps() {
+        window.open("https://www.google.com/maps?q=-8.151308656903707, 115.03581270489644", "_blank");
+    }
+
+    setTimeout(() => {
+        document.getElementById("coordinatePopup").style.display = "block";
+    }, 2000); // Muncul setelah 2 detik
+</script>
+
+</body>
+</html>
+
+<script>
+    function initMap() {
+        var lokasi = { lat: -8.157913, lng: 115.033293 }; // Ganti dengan koordinat Yama Dolphin Tour
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: lokasi,
+            mapTypeId: 'satellite' // Menampilkan peta satelit
+        });
+        var marker = new google.maps.Marker({
+            position: lokasi,
+            map: map,
+            title: "Yama Dolphin Tour"
+        });
+    }
+</script>
+
+
+<footer>
+    <p>&copy; 2025 Yama Dolphin Tour. All rights reserved.</p>
+</footer>
